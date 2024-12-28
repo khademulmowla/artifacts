@@ -51,7 +51,7 @@ const UpdateArtifact = () => {
                     assignment-11 | Update Artifact
                 </title>
             </Helmet>
-            <h1 className="text-2xl font-bold mb-6 text-center">Add Artifact</h1>
+            <h1 className="text-2xl font-bold mb-6 text-center">Update Artifact</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Artifact Name */}
                 <div>
