@@ -31,10 +31,9 @@ const UpdateArtifact = () => {
         const name = form.userName.value;
         const email = form.userEmail.value;
         const formData = { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count: art.like_count }
-        console.log(formData)
+        // console.log(formData)
         try {
             await axios.put(`${import.meta.env.VITE_API_URL}/update-artifact/${id}`, formData)
-            // form.reset()
             navigate('/my-artifacts')
             toast.success('Data updated successfully')
         }
@@ -53,7 +52,6 @@ const UpdateArtifact = () => {
             </Helmet>
             <h1 className="text-2xl font-bold mb-6 text-center">Update Artifact</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Artifact Name */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="artifactName">
                         Artifact Name
@@ -67,8 +65,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* Artifact Image */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="artifactImage">
                         Artifact Image (URL)
@@ -82,8 +78,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* Artifact Type */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="artifactType">
                         Artifact Type
@@ -101,8 +95,6 @@ const UpdateArtifact = () => {
                         <option value="Writings">Writings</option>
                     </select>
                 </div>
-
-                {/* Historical Context */}
                 <div>
                     <label className="block text-sm font-medium  mb-1" htmlFor="historicalContext">
                         Historical Context
@@ -116,8 +108,6 @@ const UpdateArtifact = () => {
                         rows="4"
                     ></textarea>
                 </div>
-
-                {/* Created At */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="createdAt">
                         Created At
@@ -131,8 +121,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* Discovered At */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="discoveredAt">
                         Discovered At
@@ -146,8 +134,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* Discovered By */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="discoveredBy">
                         Discovered By
@@ -161,8 +147,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* Present Location */}
                 <div>
                     <label className="block text-sm font-medium mb-1" htmlFor="presentLocation">
                         Present Location
@@ -176,8 +160,6 @@ const UpdateArtifact = () => {
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
-
-                {/* User Name and Email (Read-Only) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label className="block text-sm font-medium mb-1" htmlFor="userName">
@@ -205,8 +187,6 @@ const UpdateArtifact = () => {
                         />
                     </div>
                 </div>
-
-                {/* Submit Button */}
                 <div className="text-center">
                     <button
                         type="submit"

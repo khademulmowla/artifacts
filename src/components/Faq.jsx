@@ -14,14 +14,11 @@ const Faq = () => {
                 <span className="w-1/5 border-b lg:w-3/4"></span>
             </div>
             <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 px-6">
-                {/* Left Side: Lottie Animation */}
                 <div className="lg:w-1/2 w-full text-center">
-                    <div className="w-2/4 mx-auto"> {/* Adjust width here */}
+                    <div className="w-2/4 mx-auto">
                         <Lottie animationData={faqlottieanimation} />
                     </div>
                 </div>
-
-                {/* Right Side: Accordion */}
                 <div className="lg:w-1/2 w-full text-white ">
                     <div className="collapse collapse-arrow bg-gray-800">
                         <input type="radio" name="my-accordion-2" defaultChecked />

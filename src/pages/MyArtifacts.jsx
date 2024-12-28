@@ -1,12 +1,11 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
 const MyArtifacts = () => {
-    const navigate = useNavigate()
     const { user } = useContext(AuthContext)
     const [arts, setArts] = useState([])
     useEffect(() => {
@@ -19,7 +18,7 @@ const MyArtifacts = () => {
     const handleDelete = async id => {
         try {
             const { data } = await axios.delete(`${import.meta.env.VITE_API_URL}/artifact/${id}`)
-            console.log(data)
+            // console.log(data)
             toast.success('Data deleted successfully')
             fetchAllArts()
 
@@ -58,8 +57,7 @@ const MyArtifacts = () => {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 p-6">
                 {
                     arts.map(art => <div key={art._id}>
-                        <div className="flex-1 px-4 py-7 bg-gray-800 border border-gray-600 rounded-md rounded-md shadow-md md:min-h-[350px] flex flex-col justify-between max-w-full">
-                            {/* Top Section */}
+                        <div className="flex-1 px-4 py-7 bg-gray-800 border border-gray-600 rounded-md shadow-md md:min-h-[350px] flex flex-col justify-between max-w-full">
                             <div>
                                 <div className="flex flex-wrap gap-4">
                                     <div className="flex-1">
@@ -89,8 +87,6 @@ const MyArtifacts = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Bottom Section */}
                             <div className="flex justify-between py-4">
                                 <button
                                     onClick={() => toastDelete(art._id)}

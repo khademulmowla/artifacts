@@ -29,7 +29,6 @@ const ArtifactDetails = () => {
     const { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count, _id } = art || {}
 
     const toggleLike = async () => {
-        // Optimistic UI update
         const newLikeStatus = !isLiked;
         setIsLiked(newLikeStatus);
 
@@ -67,10 +66,7 @@ const ArtifactDetails = () => {
             <Helmet>
                 <title>Artifact Details</title>
             </Helmet>
-
-            {/* Container */}
             <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 bg-gray-900 rounded-lg shadow-lg p-6 lg:p-10">
-                {/* Image Section */}
                 <div className="flex justify-center items-center">
                     <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-lg shadow-md border border-gray-600">
                         <img
@@ -80,8 +76,6 @@ const ArtifactDetails = () => {
                         />
                     </div>
                 </div>
-
-                {/* Content Section */}
                 <div className="space-y-6">
                     <div className="flex items-center justify-between">
                         <h1 className="text-3xl font-bold text-white">{artiName}</h1>

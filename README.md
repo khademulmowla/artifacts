@@ -5,6 +5,7 @@
 The purpose of Artifacts project is to create a web application for tracking and managing historical artifacts. It aims to provide a user-friendly platform where users can explore, view details, and contribute their own entries for various artifacts. The application is designed to make historical information more accessible while encouraging user interaction through features like liking artifacts, viewing user-contributed data, and maintaining personalized artifact collections. 
 
 # Live Link:
+  https://assignment-11-client-8495f.web.app/
 
 # Key Features:
 1. User authentication system with email/password login and Google.

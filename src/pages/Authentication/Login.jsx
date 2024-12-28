@@ -11,8 +11,6 @@ const Login = () => {
     const from = location?.state || '/'
     console.log(from)
     const { signIn, signInWithGoogle } = useContext(AuthContext)
-
-    // Google Signin
     const handleGoogleSignIn = async () => {
         try {
             await signInWithGoogle()
@@ -23,16 +21,13 @@ const Login = () => {
             toast.error(err?.message)
         }
     }
-
-    // Email Password Signin
     const handleSignIn = async e => {
         e.preventDefault()
         const form = e.target
         const email = form.email.value
         const pass = form.password.value
-        console.log({ email, pass })
+        // console.log({ email, pass })
         try {
-            //User Login
             await signIn(email, pass)
             toast.success('Signin Successful')
             navigate(from, { replace: true })
@@ -45,21 +40,15 @@ const Login = () => {
     return (
         <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-12 px-4">
             <div className="flex flex-col lg:flex-row items-center w-full max-w-sm lg:max-w-4xl mx-auto overflow-hidden text-white rounded-lg shadow-lg">
-                {/* Animation Section */}
                 <div className="w-full lg:w-1/2 text-center mb-6 lg:mb-0">
                     <Lottie animationData={loginLottieAnimation}></Lottie>
                 </div>
-
-                {/* Form Section */}
                 <div className="w-full px-6 py-8 lg:px-12 lg:w-1/2 bg-gray-800">
-                    {/* Logo */}
                     <div className="flex justify-center mb-4">
                         <img className="w-auto h-7 sm:h-8" src={logo} alt="Logo" />
                     </div>
 
                     <p className="text-xl text-center mb-6">Welcome back!</p>
-
-                    {/* Google Sign-In Button */}
                     <div
                         onClick={handleGoogleSignIn}
                         className="flex cursor-pointer items-center justify-center mb-6 transition-colors duration-300 transform border rounded-lg hover:bg-gray-700"
@@ -88,8 +77,6 @@ const Login = () => {
                             Sign in with Google
                         </span>
                     </div>
-
-                    {/* Email Login Section */}
                     <div className="flex items-center justify-between mb-4">
                         <span className="w-1/5 border-b lg:w-1/4"></span>
                         <div className="text-xs text-center uppercase hover:underline">

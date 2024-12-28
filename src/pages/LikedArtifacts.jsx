@@ -17,7 +17,7 @@ const LikedArtifacts = () => {
         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/liked/${user?.email}`)
         setLikes(data)
     }
-    console.log(likes)
+    // console.log(likes)
 
     return (
         <div className="py-6">
