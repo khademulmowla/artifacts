@@ -50,7 +50,7 @@ const ContactUs = () => {
                             ></textarea>
                         </div>
                         <div className='text-center my-4'>
-                            <button to="/#" className='w-full text-white btn btn-sm bg-[#ac9a1a] hover:bg-gray-800'>See All</button>
+                            <button to="/#" className='w-full text-white btn btn-sm bg-[#ac9a1a] hover:bg-gray-800'>Submit</button>
                         </div>
                     </div>
                 </div>
