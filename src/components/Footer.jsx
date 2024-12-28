@@ -60,7 +60,7 @@ const Footer = () => {
 
                 <hr className='my-6 border-gray-200 md:my-10 ' />
 
-                <div className='flex flex-col items-center sm:flex-row sm:justify-between'>
+                <div className='flex flex-col items-center sm:flex-row sm:justify-between space-y-2'>
                     <p className='text-sm'>
                         © Copyright 2024. All Rights Reserved.
                     </p>

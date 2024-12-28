@@ -1,9 +1,19 @@
 import { useContext } from 'react'
 import logo from '../assets/images/logo.png'
 import { AuthContext } from '../providers/AuthProvider'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const handleLogOut = async () => {
+        try {
+            await logOut();
+            navigate('/login');
+        } catch (error) {
+            console.error('Error during logout:', error);
+        }
+    };
+
     return (
         <div className='navbar bg-[#c1ac28] text-white shadow-sm container px-4 mx-auto'>
             <div className='flex-1'>
@@ -58,7 +68,7 @@ const Navbar = () => {
                             </li>
                             <li className='mt-2'>
                                 <button
-                                    onClick={logOut}
+                                    onClick={handleLogOut}
                                     className='bg-gray-800 hover:bg-gray-500 block text-center'
                                 >
                                     Logout

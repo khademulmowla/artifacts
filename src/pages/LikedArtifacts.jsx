@@ -20,12 +20,16 @@ const LikedArtifacts = () => {
     console.log(likes)
 
     return (
-        <div>
+        <div className="py-6">
             <Helmet>
                 <title>
                     assignment-11 | Liked Artifacts
                 </title>
             </Helmet>
+            <div className="text-center">
+                <h1 className="text-2xl text-gray-300 font-semibold">The Artifact Chronicles Liked By You.</h1>
+                <p className="text-gray-400">Honoring history, inspiring discovery.</p>
+            </div>
             {likes.length === 0 ? (
                 <div className="text-center mt-12">
                     <h2 className="text-2xl font-semibold text-gray-400">No Liked Artifacts Found</h2>

@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
 const UpdateArtifact = () => {
+    const navigate = useNavigate()
     const { user } = useContext(AuthContext)
     const { id } = useParams()
     const [art, setArt] = useState([])
@@ -34,7 +35,8 @@ const UpdateArtifact = () => {
         try {
             await axios.put(`${import.meta.env.VITE_API_URL}/update-artifact/${id}`, formData)
             // form.reset()
-            toast.success('Data added successfully')
+            navigate('/my-artifacts')
+            toast.success('Data updated successfully')
         }
         catch (err) {
             console.log(err)
@@ -208,7 +210,7 @@ const UpdateArtifact = () => {
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="w-full sm:w-auto px-6 py-2 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full sm:w-auto px-6 py-2 bg-[#ac9a1a] hover:bg-gray-800 text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
                         Update Artifact
                     </button>

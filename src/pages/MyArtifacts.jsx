@@ -36,7 +36,6 @@ const MyArtifacts = () => {
                         <button className='bg-red-400 text-white px-3 py-1 rounded-md' onClick={() => {
                             toast.dismiss(t.id)
                             handleDelete(id)
-                            navigate('/artifacts')
                         }}>Yes</button>
                         <button className='bg-green-400 text-white px-3 py-1 rounded-md' onClick={() => toast.dismiss(t.id)}>Cancel</button>
                     </div>
@@ -52,6 +51,10 @@ const MyArtifacts = () => {
                     assignment-11 | My Artifacts
                 </title>
             </Helmet>
+            <div className="text-center my-6">
+                <h1 className="text-2xl text-gray-300 font-semibold">The Artifact Chronicles Added By You.</h1>
+                <p className="text-gray-400">These artifacts stand as silent witnesses, carrying the essence of history into the present.</p>
+            </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 p-6">
                 {
                     arts.map(art => <div key={art._id}>
@@ -88,14 +91,14 @@ const MyArtifacts = () => {
                             </div>
 
                             {/* Bottom Section */}
-                            <div className="flex justify-between">
+                            <div className="flex justify-between py-4">
                                 <button
                                     onClick={() => toastDelete(art._id)}
-                                    className="btn btn-sm bg-red-200">
+                                    className="btn btn-sm bg-red-700 text-white hover:bg-red-400">
                                     Delete
                                 </button>
                                 <Link to={`/update/${art._id}`}>
-                                    <button className="btn btn-sm bg-green-200">Update</button>
+                                    <button className="btn btn-sm bg-green-700 text-white hover:bg-[#ac9a1a]">Update</button>
                                 </Link>
                             </div>
                         </div>

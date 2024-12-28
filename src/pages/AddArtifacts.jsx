@@ -25,7 +25,7 @@ const AddArtifacts = () => {
         console.log(formData)
         try {
             await axios.post(`${import.meta.env.VITE_API_URL}/add-artifact`, formData)
-            // form.reset()
+            form.reset()
             toast.success('Data added successfully')
         }
         catch (err) {
@@ -51,6 +51,7 @@ const AddArtifacts = () => {
                         type="text"
                         id="artifactName"
                         name="artifactName"
+                        required
                         placeholder="Enter artifact name"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
@@ -63,6 +64,7 @@ const AddArtifacts = () => {
                         type="url"
                         id="artifactImage"
                         name="artifactImage"
+                        required
                         placeholder="Enter image URL"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
@@ -90,6 +92,7 @@ const AddArtifacts = () => {
                     <textarea
                         id="historicalContext"
                         name="historicalContext"
+                        required
                         placeholder="Provide historical context"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         rows="4"
@@ -103,6 +106,7 @@ const AddArtifacts = () => {
                         type="text"
                         id="createdAt"
                         name="createdAt"
+                        required
                         placeholder="e.g., 100 BC"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
@@ -114,6 +118,7 @@ const AddArtifacts = () => {
                     <input
                         type="text"
                         id="discoveredAt"
+                        required
                         name="discoveredAt"
                         placeholder="e.g., 1799"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -126,6 +131,7 @@ const AddArtifacts = () => {
                     <input
                         type="text"
                         id="discoveredBy"
+                        required
                         name="discoveredBy"
                         placeholder="Enter name"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -138,6 +144,7 @@ const AddArtifacts = () => {
                     <input
                         type="text"
                         id="presentLocation"
+                        required
                         name="presentLocation"
                         placeholder="Enter location"
                         className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -173,7 +180,7 @@ const AddArtifacts = () => {
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="w-full sm:w-auto px-6 py-2 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full sm:w-auto px-6 py-2 text-white font-medium rounded-md shadow-sm bg-[#ac9a1a] hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
                         Add Artifact
                     </button>
