@@ -92,7 +92,7 @@ const ArtifactDetails = () => {
                             <span className="font-semibold text-lg">Discovered At:</span> {discoverAt}
                         </p>
                         <p className="text-thin text-gray-400">
-                            {discoverBy}
+                            <span className="font-semibold text-lg">Discovered By:</span> {discoverBy}
                         </p>
                         <p className="text-thin text-gray-400">
                             <span className="font-semibold text-lg">Present Location:</span> {location}
