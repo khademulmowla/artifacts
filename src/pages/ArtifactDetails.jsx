@@ -130,9 +130,6 @@ const ArtifactDetails = () => {
                 </div>
             </div>
         </div>
-
-
-
     );
 };
 
