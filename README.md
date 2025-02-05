@@ -59,5 +59,7 @@ Build for Production:
 ---
 
 # Live Link:
-  https://assignment-11-client-8495f.web.app/
+  - https://assignment-11-client-8495f.web.app/
+  - [Firebase Documentation](https://firebase.google.com/docs)
+  - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
  
