@@ -18,7 +18,7 @@ const AllArtifacts = () => {
         <div>
             <Helmet>
                 <title>
-                    assignment-11 | All Artifacts
+                    Artifacts | All Artifacts
                 </title>
             </Helmet>
             <div className='flex flex-col md:flex-row justify-center items-center mt-10'>

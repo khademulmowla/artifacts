@@ -38,7 +38,7 @@ const AddArtifacts = () => {
         <div className="max-w-4xl mx-auto my-6 p-6 bg-gray-700 text-white shadow-lg rounded-lg">
             <Helmet>
                 <title>
-                    assignment-11 | Add Artifact
+                    Artifacts | Add Artifact
                 </title>
             </Helmet>
             <h1 className="text-2xl font-bold mb-6 text-center">Add Artifact</h1>

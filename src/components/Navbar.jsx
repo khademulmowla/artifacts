@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import logo from '../assets/images/logo.png';
 import { AuthContext } from '../providers/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaList, FaPlus, FaUser, FaHeart, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaList, FaPlus, FaUser, FaHeart, FaSignOutAlt, FaInfo } from 'react-icons/fa';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -47,6 +47,9 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link to='/add-artifact'><FaPlus className="inline mr-2" />Add Artifact</Link>
+                        </li>
+                        <li>
+                            <Link to='/aboutus'><FaInfo className="inline mr-2" />About Us</Link>
                         </li>
                         {!user && (
                             <li>
@@ -93,6 +96,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to='/add-artifact'><FaPlus className="inline" />Add Artifact</Link>
+                    </li>
+                    <li>
+                        <Link to='/aboutus'><FaInfo className="inline" />About Us</Link>
                     </li>
                     {!user && (
                         <li>

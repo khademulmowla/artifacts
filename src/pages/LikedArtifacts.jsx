@@ -23,7 +23,7 @@ const LikedArtifacts = () => {
         <div className="my-10">
             <Helmet>
                 <title>
-                    assignment-11 | Liked Artifacts
+                    Artifacts | Liked Artifacts
                 </title>
             </Helmet>
             <div className="text-center">

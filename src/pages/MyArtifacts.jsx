@@ -47,7 +47,7 @@ const MyArtifacts = () => {
         <div className='mb-10'>
             <Helmet>
                 <title>
-                    assignment-11 | My Artifacts
+                    Artifacts | My Artifacts
                 </title>
             </Helmet>
             <div className="text-center my-10">
