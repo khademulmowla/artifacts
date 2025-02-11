@@ -13,7 +13,7 @@ const Slide = ({ image, text, text2 }) => {
                     <h1 className='text-3xl font-semibold text-white lg:text-4xl'>
                         {text}
                     </h1>
-                    <p className='text-xl text-gray-300'>{text2}</p>
+                    <p className='text-lg text-gray-300 max-w-xs md:max-w-md'>{text2}</p>
                     <br />
                     <Link
                         to='/artifacts'

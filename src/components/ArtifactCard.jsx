@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArtifactCard = ({ art }) => {
-    const { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count, _id } = art || {}
+    const { artiName, artiImg, category, history, like_count, _id } = art || {}
     return (
-        <div className="w-full max-w-sm px-4 py-3 bg-gray-800 text-gray-200 border border-gray-600 rounded-md shadow-lg hover:shadow-xl hover:scale-[1.05] transition-transform duration-300 flex flex-col">
+        <div className="w-full px-4 py-3 bg-gray-800 text-gray-200 border border-gray-600 rounded-md shadow-lg hover:shadow-xl hover:scale-[1.05] transition-transform duration-300 flex flex-col">
             <div className="w-full h-48 overflow-hidden rounded-t-md">
                 <img
                     src={artiImg}
@@ -15,7 +15,7 @@ const ArtifactCard = ({ art }) => {
             <div className="flex-1 p-4">
                 <div className="flex items-center justify-between">
                     <span className="text-xl font-bold text-white">{artiName}</span>
-                    <span className="px-3 py-1 text-[8px] text-blue-800 uppercase bg-blue-200 rounded-full">
+                    <span className="px-3 py-1 text-[8px] border bg-blue-900 uppercase rounded-full">
                         {category}
                     </span>
                 </div>

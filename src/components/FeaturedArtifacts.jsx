@@ -19,9 +19,9 @@ const FeaturedArtifacts = () => {
         }
     };
     return (
-        <div>
-            <div className="w-1/2 mx-auto">
-                <h2 className="text-3xl font-bold text-center text-gray-300">
+        <div className='mb-8'>
+            <div className="w-1/2 mx-auto ">
+                <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">
                     <Typewriter
                         words={['Featured Artifacts']}
                         loop={0}
@@ -36,7 +36,20 @@ const FeaturedArtifacts = () => {
                     <Typewriter
                         words={[
                             'Relics of History, Revived',
-                            'Dive into the stories behind the most treasured artifacts.',
+                        ]}
+                        loop={0}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={2000}
+                    />
+                </p>
+                <p className="text-center text-gray-400">
+                    <Typewriter
+                        words={[
+                            'Dive into the stories behind',
+                            'the most treasured artifacts.',
                         ]}
                         loop={0}
                         cursor
@@ -47,13 +60,13 @@ const FeaturedArtifacts = () => {
                     />
                 </p>
             </div>
-            <div className='grid grid-cols-1 px-6 gap-8 my-6 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            <div className='grid grid-cols-1 px-8 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {
                     arts.map(art => <ArtifactCard art={art} key={art._id}></ArtifactCard>)
                 }
             </div>
             <div className='text-center my-6'>
-                <Link to="/artifacts" className='text-white btn btn-sm bg-[#ac9a1a] hover:bg-gray-800'>See All</Link>
+                <Link to="/artifacts" className='text-white btn btn-sm bg-[#ac9a1a] hover:bg-blue-900'>See All</Link>
             </div>
         </div>
     );
