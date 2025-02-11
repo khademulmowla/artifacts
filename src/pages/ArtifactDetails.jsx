@@ -1,32 +1,57 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React,
+{
+    useContext, useEffect, useState
+} from 'react';
 import toast from 'react-hot-toast';
-import { Link, useParams } from 'react-router-dom';
-import { AuthContext } from '../providers/AuthProvider';
-import { Helmet } from 'react-helmet-async';
+import {
+    Link, useParams
+} from 'react-router-dom';
+import {
+    AuthContext
+} from '../providers/AuthProvider';
+import {
+    Helmet
+} from 'react-helmet-async';
+import {
+    FaThumbsDown, FaThumbsUp
+} from 'react-icons/fa';
 
 const ArtifactDetails = () => {
-    const { user } = useContext(AuthContext)
-    const { id } = useParams()
-    const [art, setArt] = useState([])
-    const [isLiked, setIsLiked] = useState(false);
+    const { user
+    } = useContext(AuthContext)
+    const { id
+    } = useParams()
+    const [art, setArt
+    ] = useState([])
+    const [isLiked, setIsLiked
+    ] = useState(false);
 
     useEffect(() => {
         fetchAllArts()
         checkLikeStatus();
-    }, [id])
+    },
+        [id
+        ])
     const fetchAllArts = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/artifact/${id}`)
+        const { data
+        } = await axios.get(`${import.meta.env.VITE_API_URL
+            }/artifact/${id
+            }`)
         setArt(data)
     }
     const checkLikeStatus = async () => {
         if (user?.email) {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/liked/${user.email}`);
+            const { data
+            } = await axios.get(`${import.meta.env.VITE_API_URL
+                }/liked/${user.email
+                }`);
             const liked = data.some((like) => like.artLikeId === id);
             setIsLiked(liked);
         }
     };
-    const { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count, _id } = art || {}
+    const { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count, _id
+    } = art || {}
 
     const toggleLike = async () => {
         const newLikeStatus = !isLiked;
@@ -47,7 +72,9 @@ const ArtifactDetails = () => {
                 artLikeId: art._id,
             };
 
-            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/add-like`, likeData);
+            const { data
+            } = await axios.post(`${import.meta.env.VITE_API_URL
+                }/add-like`, likeData);
             setArt((prev) => ({
                 ...prev,
                 like_count: data.isLiked ? prev.like_count + 1 : prev.like_count - 1,
@@ -68,60 +95,80 @@ const ArtifactDetails = () => {
             </Helmet>
             <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 bg-gray-900 rounded-lg shadow-lg p-6 lg:p-10">
                 <div className="flex justify-center items-center">
-                    <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-lg shadow-md border border-gray-600">
+                    <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-lg shadow-md border border-gray-600">
                         <img
-                            src={artiImg}
-                            alt={artiName}
+                            src={artiImg
+                            }
+                            alt={artiName
+                            }
                             className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
                 <div className="space-y-6">
-                    <div className="flex items-center justify-between">
-                        <h1 className="text-3xl font-bold text-white">{artiName}</h1>
-                        <span className="px-4 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full">
-                            {category}
-                        </span>
+                    <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center justify-center gap-4">
+                            <h1 className="text-3xl font-bold text-white">{artiName
+                            }</h1>
+                            <div>
+                                <button
+                                    onClick={toggleLike
+                                    }
+                                    className={`btn btn-sm ${isLiked ? 'bg-red-800' : 'bg-green-800'
+                                        } text-white hover:opacity-90 w-full md:w-auto`
+                                    }
+                                >
+                                    {isLiked ? <FaThumbsDown></FaThumbsDown> : <FaThumbsUp></FaThumbsUp>
+                                    }
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <span className="px-4 py-1 text-xs border uppercase bg-blue-900 rounded-full">
+                                {category
+                                }
+                            </span>
+                        </div>
                     </div>
                     <div className="space-y-2">
                         <p className="text-thin text-gray-400">
-                            <span className="font-semibold text-lg">Created At:</span> {create}
+                            <span className="font-semibold text-lg">Created At:</span> {create
+                            }
                         </p>
-                        <p className="text-thin text-gray-400">{history}</p>
+                        <p className="text-thin text-gray-400">{history
+                        }</p>
                         <p className="text-thin text-gray-400">
-                            <span className="font-semibold text-lg">Discovered At:</span> {discoverAt}
+                            <span className="font-semibold text-lg">Discovered At:</span> {discoverAt
+                            }
                         </p>
                         <p className="text-thin text-gray-400">
-                            <span className="font-semibold text-lg">Discovered By:</span> {discoverBy}
+                            <span className="font-semibold text-lg">Discovered By:</span> {discoverBy
+                            }
                         </p>
                         <p className="text-thin text-gray-400">
-                            <span className="font-semibold text-lg">Present Location:</span> {location}
+                            <span className="font-semibold text-lg">Present Location:</span> {location
+                            }
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-4 md:flex-row justify-between items-center">
+                    <div className="flex gap-4 md:flex-row justify-between items-center">
                         <div>
                             <div className='text-gray-400 space-y-1'>
-                                <p className="text-sm">Artifact Adder: {name}</p>
-                                <p className="text-sm">Email: {email}</p>
+                                <p className="text-sm">Artifact Adder: {name
+                                }</p>
+                                <p className="text-sm">Email: {email
+                                }</p>
                             </div>
                             <div className="mt-4">
                                 <Link
                                     to="/artifacts"
-                                    className="text-white btn btn-sm bg-[#ac9a1a] hover:bg-gray-800"
+                                    className="text-white btn btn-sm bg-[#ac9a1a] hover:bg-blue-900"
                                 >
                                     See All
                                 </Link>
                             </div>
                         </div>
-                        <div className='mt-10'>
-                            <button
-                                onClick={toggleLike}
-                                className={`btn btn-sm ${isLiked ? 'bg-red-600' : 'bg-blue-800'} text-white hover:opacity-90 w-full md:w-auto`}
-                            >
-                                {isLiked ? 'Unlike' : 'Like'}
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
