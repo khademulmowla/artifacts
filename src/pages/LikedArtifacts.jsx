@@ -20,7 +20,7 @@ const LikedArtifacts = () => {
     // console.log(likes)
 
     return (
-        <div className="py-6">
+        <div className="my-10">
             <Helmet>
                 <title>
                     assignment-11 | Liked Artifacts
@@ -36,7 +36,7 @@ const LikedArtifacts = () => {
                     <p className="text-gray-300 mt-4">You haven't liked any artifacts yet. Start exploring...</p>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 px-6 gap-8 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid grid-cols-1 px-8 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {likes.map(like => <LikedArtCard like={like} key={like._id} />)}
                 </div>
             )}

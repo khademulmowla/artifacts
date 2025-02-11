@@ -21,7 +21,7 @@ const AllArtifacts = () => {
                     assignment-11 | All Artifacts
                 </title>
             </Helmet>
-            <div className='flex flex-col md:flex-row justify-center items-center mt-6'>
+            <div className='flex flex-col md:flex-row justify-center items-center mt-10'>
                 <form>
                     <div className='flex p-1 overflow-hidden border rounded-lg    focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300'>
                         <input
@@ -40,7 +40,7 @@ const AllArtifacts = () => {
                     </div>
                 </form>
             </div>
-            <div className='grid grid-cols-1 px-6 gap-8 my-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            <div className='grid grid-cols-1 px-8 gap-8 my-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {
                     arts.map(art => <ArtifactCard art={art} key={art._id}></ArtifactCard>)
                 }

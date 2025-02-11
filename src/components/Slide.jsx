@@ -17,7 +17,7 @@ const Slide = ({ image, text, text2 }) => {
                     <br />
                     <Link
                         to='/artifacts'
-                        className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'
+                        className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform hover:bg-blue-900 rounded-md lg:w-auto bg-[#ac9a1a] focus:outline-none focus:bg-gray-500'
                     >
                         Let's Track
                     </Link>

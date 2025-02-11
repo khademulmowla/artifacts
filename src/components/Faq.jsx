@@ -5,15 +5,15 @@ import Lottie from 'lottie-react';
 
 const Faq = () => {
     return (
-        <div className='p-6 gap-8'>
-            <div className="flex items-center justify-between mb-4 gap-8">
+        <div className='px-8 mb-10'>
+            <div className="flex items-center justify-between gap-8 mb-10">
                 <span className="w-1/5 border-b lg:w-3/4"></span>
                 <div className="text-3xl text-white uppercase hover:underline">
                     FAQ
                 </div>
                 <span className="w-1/5 border-b lg:w-3/4"></span>
             </div>
-            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 px-6">
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8">
                 <div className="lg:w-1/2 w-full text-center">
                     <div className="w-2/4 mx-auto">
                         <Lottie animationData={faqlottieanimation} />

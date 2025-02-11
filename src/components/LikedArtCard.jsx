@@ -3,7 +3,7 @@ import React from 'react';
 const LikedArtCard = ({ like }) => {
     const { artiName, artiImg, category, history, create, discoverAt, discoverBy, location, name, email, like_count, _id } = like || {}
     return (
-        <div className="w-full max-w-sm px-4 py-3 bg-gray-800 text-gray-200 border border-gray-600 rounded-md shadow-lg hover:shadow-xl hover:scale-[1.05] transition-transform duration-300 flex flex-col justify-between h-[400px]l">
+        <div className="w-full px-4 py-3 bg-gray-800 text-gray-200 border border-gray-600 rounded-md shadow-lg hover:shadow-xl hover:scale-[1.05] transition-transform duration-300 flex flex-col">
             <div className="w-full h-48 overflow-hidden rounded-t-md">
                 <img
                     src={artiImg}

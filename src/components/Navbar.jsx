@@ -86,17 +86,17 @@ const Navbar = () => {
             <div className='flex-none pr-2 hidden lg:flex'>
                 <ul className='menu menu-horizontal px-1'>
                     <li>
-                        <Link to='/'><FaHome className="inline mr-2" />Home</Link>
+                        <Link to='/'><FaHome className="inline" />Home</Link>
                     </li>
                     <li>
-                        <Link to='/artifacts'><FaList className="inline mr-2" />All Artifacts</Link>
+                        <Link to='/artifacts'><FaList className="inline" />All Artifacts</Link>
                     </li>
                     <li>
-                        <Link to='/add-artifact'><FaPlus className="inline mr-2" />Add Artifact</Link>
+                        <Link to='/add-artifact'><FaPlus className="inline" />Add Artifact</Link>
                     </li>
                     {!user && (
                         <li>
-                            <Link to='/login'><FaUser className="inline mr-2" />Login</Link>
+                            <Link to='/login'><FaUser className="inline" />Login</Link>
                         </li>
                     )}
                 </ul>
@@ -118,13 +118,13 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#c1ac28] rounded-box w-52'
+                            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#ac9a1a] rounded-box w-52'
                         >
                             <li>
-                                <Link to='/liked-artifacts'><FaHeart className="inline mr-2" />Liked Artifacts</Link>
+                                <Link to='/liked-artifacts'><FaHeart className="inline" />Liked Artifacts</Link>
                             </li>
                             <li>
-                                <Link to='/my-artifacts'><FaUser className="inline mr-2" />My Artifacts</Link>
+                                <Link to='/my-artifacts'><FaUser className="inline" />My Artifacts</Link>
                             </li>
                             <li className='mt-2'>
                                 <button

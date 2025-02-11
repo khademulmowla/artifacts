@@ -19,8 +19,8 @@ const FeaturedArtifacts = () => {
         }
     };
     return (
-        <div className='mb-8'>
-            <div className="w-1/2 mx-auto ">
+        <div className='mb-10'>
+            <div className="w-1/2 mx-auto mb-10">
                 <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">
                     <Typewriter
                         words={['Featured Artifacts']}
@@ -65,8 +65,13 @@ const FeaturedArtifacts = () => {
                     arts.map(art => <ArtifactCard art={art} key={art._id}></ArtifactCard>)
                 }
             </div>
-            <div className='text-center my-6'>
-                <Link to="/artifacts" className='text-white btn btn-sm bg-[#ac9a1a] hover:bg-blue-900'>See All</Link>
+            <div className='my-6 px-8'>
+                <Link
+                    to="/artifacts"
+                    className='w-full max-w-[300px] mx-auto text-white btn btn-sm hover:bg-[#ac9a1a] bg-blue-900 block flex justify-center items-center'
+                >
+                    See All
+                </Link>
             </div>
         </div>
     );
