@@ -21,7 +21,7 @@ const FeaturedArtifacts = () => {
     return (
         <div className='mb-10'>
             <div className="w-1/2 mx-auto mb-10">
-                <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">
+                <h2 className="text-xl md:text-2xl font-bold text-center text-gray-900 dark:text-gray-300">
                     <Typewriter
                         words={['Featured Artifacts']}
                         loop={0}
@@ -32,7 +32,7 @@ const FeaturedArtifacts = () => {
                         delaySpeed={1500}
                     />
                 </h2>
-                <p className="text-center text-gray-400">
+                <p className="text-center text-gray-700 dark:text-gray-400">
                     <Typewriter
                         words={[
                             'Relics of History, Revived',
@@ -45,7 +45,7 @@ const FeaturedArtifacts = () => {
                         delaySpeed={2000}
                     />
                 </p>
-                <p className="text-center text-gray-400">
+                <p className="text-center text-gray-700 dark:text-gray-400">
                     <Typewriter
                         words={[
                             'Dive into the stories behind',

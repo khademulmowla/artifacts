@@ -25,8 +25,8 @@ const Review = () => {
     }, []);
 
     return (
-        <section className=" bg-black text-white">
-            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">Customer Reviews</h2>
+        <section className=" bg-gray-200 dark:bg-gray-800 text-white py-8">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-700 dark:text-gray-400">Customer Reviews</h2>
             {/* Swiper Slider */}
             <Swiper
                 effect={'coverflow'}
@@ -47,14 +47,14 @@ const Review = () => {
             >
                 {reviews.map((review) => (
                     <SwiperSlide key={review._id}>
-                        <div className='flex flex-col items-center bg-gray-800 p-8 rounded-lg shadow-lg mx-4 my-8'>
+                        <div className='flex flex-col items-center bg-gray-200 dark:bg-blue-900 p-8 rounded-lg shadow-lg mx-4 my-8'>
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}
                                 readOnly
                             />
-                            <p className='py-8 text-center text-gray-300'>{review.details}</p>
-                            <h3 className='text-xl font-bold text-white'>{review.name}</h3>
+                            <p className='py-8 text-center text-gray-800 dark:text-gray-300'>{review.details}</p>
+                            <h3 className='dark:text-white text-black text-2xl font-semibold'>{review.name}</h3>
                         </div>
                     </SwiperSlide>
                 ))}

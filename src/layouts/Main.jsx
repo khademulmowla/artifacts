@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const Main = () => {
     return (
-        <div className='bg-[#060505]'>
+        <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             <div className='sticky top-0 z-50'>
                 <Navbar></Navbar>
             </div>

@@ -35,7 +35,7 @@ const AddArtifacts = () => {
         }
     }
     return (
-        <div className="max-w-4xl mx-auto my-6 p-6 bg-gray-700 text-white shadow-lg rounded-lg">
+        <div className="max-w-4xl mx-auto my-6 p-6 bg-gray-200 dark:bg-gray-700 dark:text-white shadow-lg rounded-lg">
             <Helmet>
                 <title>
                     Artifacts | Add Artifact
@@ -53,7 +53,7 @@ const AddArtifacts = () => {
                         name="artifactName"
                         required
                         placeholder="Enter artifact name"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div>
@@ -66,7 +66,7 @@ const AddArtifacts = () => {
                         name="artifactImage"
                         required
                         placeholder="Enter image URL"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div>
@@ -76,7 +76,7 @@ const AddArtifacts = () => {
                     <select
                         id="artifactType"
                         name="artifactType"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     >
                         <option value="">Select a type</option>
                         <option value="Tools">Tools</option>
@@ -94,7 +94,7 @@ const AddArtifacts = () => {
                         name="historicalContext"
                         required
                         placeholder="Provide historical context"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         rows="4"
                     ></textarea>
                 </div>
@@ -108,7 +108,7 @@ const AddArtifacts = () => {
                         name="createdAt"
                         required
                         placeholder="e.g., 100 BC"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div>
@@ -121,7 +121,7 @@ const AddArtifacts = () => {
                         required
                         name="discoveredAt"
                         placeholder="e.g., 1799"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ const AddArtifacts = () => {
                         required
                         name="discoveredBy"
                         placeholder="Enter name"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div>
@@ -147,7 +147,7 @@ const AddArtifacts = () => {
                         required
                         name="presentLocation"
                         placeholder="Enter location"
-                        className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -160,7 +160,7 @@ const AddArtifacts = () => {
                             id="userName"
                             value={user?.displayName}
                             readOnly
-                            className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm sm:text-sm"
+                            className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm sm:text-sm"
                         />
                     </div>
 
@@ -173,14 +173,14 @@ const AddArtifacts = () => {
                             id="userEmail"
                             value={user?.email}
                             readOnly
-                            className="w-full px-3 py-2 border bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm sm:text-sm"
+                            className="w-full px-3 py-2 border dark:bg-[#ded6d6] text-black border-gray-300 rounded-md shadow-sm sm:text-sm"
                         />
                     </div>
                 </div>
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="w-full sm:w-auto px-6 py-2 text-white font-medium rounded-md shadow-sm hover:bg-blue-900 bg-[#ac9a1a] focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full sm:w-auto px-6 py-2  text-white font-medium rounded-md shadow-sm hover:bg-blue-900 bg-[#ac9a1a] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
                         Add Artifact
                     </button>

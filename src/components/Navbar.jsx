@@ -3,6 +3,7 @@ import logo from '../assets/images/logo.png';
 import { AuthContext } from '../providers/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaList, FaPlus, FaUser, FaHeart, FaSignOutAlt, FaInfo } from 'react-icons/fa';
+import DarkModeToggle from './DarkModeToggle'; // Import the DarkModeToggle component
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -20,7 +21,7 @@ const Navbar = () => {
     return (
         <div className='navbar bg-[#ac9a1a] text-white shadow-sm container px-4 mx-auto'>
             {/* Left side - Mobile Dropdown */}
-            <div className="flex-1 lg:hidden">
+            <div className="flex-1 lg:hidden flex items-center">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost text-white">
                         <svg
@@ -75,6 +76,11 @@ const Navbar = () => {
                         )}
                     </ul>
                 </div>
+
+                {/* Dark Mode Toggle for Mobile */}
+                <div className="ml-2">
+                    <DarkModeToggle />
+                </div>
             </div>
 
             {/* Right side - Logo for Mobile */}
@@ -106,6 +112,11 @@ const Navbar = () => {
                         </li>
                     )}
                 </ul>
+
+                {/* Dark Mode Toggle for Desktop */}
+                <div className="ml-4">
+                    <DarkModeToggle />
+                </div>
 
                 {user && (
                     <div className='dropdown dropdown-end z-50'>

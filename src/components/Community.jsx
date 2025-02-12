@@ -13,14 +13,14 @@ const Community = ({ user }) => {
     };
 
     return (
-        <div className="bg-gray-800 text-gray-200 py-10 px-8 rounded-lg shadow-2xl text-center my-10">
-            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300 mb-4">
+        <div className="bg-gray-200 dark:bg-gray-800 text-gray-200 py-10 px-8 rounded-lg shadow-2xl text-center my-10">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800 dark:text-gray-300 mb-4">
                 Get Exclusive Benefits!
             </h2>
-            <p className="text-gray-400 mb-8 text-lg">
+            <p className="text-gray-700 dark:text-gray-400 mb-8 text-lg">
                 Unlock the secrets of history with us! Become a part of our growing community and enjoy:
             </p>
-            <ul className="text-gray-400 mb-8 text-left mx-auto max-w-md space-y-4">
+            <ul className="text-gray-700 dark:text-gray-400 mb-8 text-left mx-auto max-w-md space-y-4">
                 <li className="flex items-center gap-3">
                     <FaEarlybirds className="text-[#ac9a1a] text-xl" />
                     <span>Early access to newly added artifacts</span>

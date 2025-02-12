@@ -4,7 +4,7 @@ import { FaHistory, FaUsers, FaLightbulb, FaAward } from 'react-icons/fa';
 
 const AboutUs = () => {
     return (
-        <section className="bg-gradient-to-r from-[#1a1a1a] to-[#333] text-gray-200 py-20 px-6">
+        <section className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-20 px-6">
             <Helmet>
                 <title>
                     Artifacts | About Us

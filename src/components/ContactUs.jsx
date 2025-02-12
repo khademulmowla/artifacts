@@ -48,7 +48,7 @@ const ContactUs = () => {
     return (
         <div className='mb-10'>
             <div>
-                <h1 className='text-xl md:text-2xl font-bold text-center text-gray-300 mb-10'>Contact Us</h1>
+                <h1 className='text-xl md:text-2xl font-bold text-center text-gray-700 dark:text-gray-400 mb-10'>Contact Us</h1>
             </div>
             <div className="hero min-h-96">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -73,7 +73,7 @@ const ContactUs = () => {
                                     placeholder="Your name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-3 py-2 border bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                    className="w-full px-3 py-2 border dark:bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                             </div>
                             <div className="mb-4">
@@ -83,7 +83,7 @@ const ContactUs = () => {
                                     placeholder="Your email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-3 py-2 border bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                    className="w-full px-3 py-2 border dark:bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                             </div>
                             <div className="mb-4">
@@ -93,7 +93,7 @@ const ContactUs = () => {
                                     rows="4"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full px-3 py-2 border bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                    className="w-full px-3 py-2 border dark:bg-[#ded6d6] border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 ></textarea>
                             </div>
                             <div className='text-center my-4'>
