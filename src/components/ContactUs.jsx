@@ -48,7 +48,7 @@ const ContactUs = () => {
     return (
         <div className='mb-10'>
             <div>
-                <h1 className='text-3xl font-semibold text-center text-white mb-10'>Contact Us</h1>
+                <h1 className='text-xl md:text-2xl font-bold text-center text-gray-300 mb-10'>Contact Us</h1>
             </div>
             <div className="hero min-h-96">
                 <div className="hero-content flex-col lg:flex-row-reverse">

@@ -25,8 +25,8 @@ const Review = () => {
     }, []);
 
     return (
-        <section className="py-12 bg-black text-white">
-            <h2 className="text-4xl font-bold text-center mb-8">Customer Reviews</h2>
+        <section className=" bg-black text-white">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">Customer Reviews</h2>
             {/* Swiper Slider */}
             <Swiper
                 effect={'coverflow'}
@@ -54,7 +54,7 @@ const Review = () => {
                                 readOnly
                             />
                             <p className='py-8 text-center text-gray-300'>{review.details}</p>
-                            <h3 className='text-white text-2xl font-semibold'>{review.name}</h3>
+                            <h3 className='text-xl font-bold text-white'>{review.name}</h3>
                         </div>
                     </SwiperSlide>
                 ))}

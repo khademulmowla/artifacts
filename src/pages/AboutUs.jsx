@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaHistory, FaUsers, FaLightbulb, FaAward } from 'react-icons/fa'; // Icons for features
+import { FaHistory, FaUsers, FaLightbulb, FaAward } from 'react-icons/fa';
 
 const AboutUs = () => {
     return (
@@ -11,14 +11,13 @@ const AboutUs = () => {
                 </title>
             </Helmet>
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-6 font-serif">
+                <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300">
                     About Us
                 </h2>
                 <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
                     Welcome to <span className="text-[#ac9a1a] font-semibold">Artifact Explorer</span>, where history comes alive! We are passionate about sharing the rich tapestry of human history through our curated collection of artifacts. Join us on this journey to uncover the stories of the past.
                 </p>
 
-                {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Feature 1: Our History */}
                     <div className="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">

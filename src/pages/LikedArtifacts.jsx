@@ -27,7 +27,7 @@ const LikedArtifacts = () => {
                 </title>
             </Helmet>
             <div className="text-center">
-                <h1 className="text-2xl text-gray-300 font-semibold">The Artifact Chronicles Liked By You.</h1>
+                <h1 className="text-xl md:text-2xl font-bold text-center text-gray-300">The Artifact Chronicles Liked By You.</h1>
                 <p className="text-gray-400">Honoring history, inspiring discovery.</p>
             </div>
             {likes.length === 0 ? (

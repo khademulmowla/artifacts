@@ -180,7 +180,7 @@ const AddArtifacts = () => {
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="w-full sm:w-auto px-6 py-2 text-white font-medium rounded-md shadow-sm bg-[#ac9a1a] hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full sm:w-auto px-6 py-2 text-white font-medium rounded-md shadow-sm hover:bg-blue-900 bg-[#ac9a1a] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
                         Add Artifact
                     </button>

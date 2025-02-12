@@ -8,7 +8,7 @@ const Faq = () => {
         <div className='px-8 mb-10'>
             <div className="flex items-center justify-between gap-8 mb-10">
                 <span className="w-1/5 border-b lg:w-3/4"></span>
-                <div className="text-3xl text-white uppercase hover:underline">
+                <div className="text-xl md:text-2xl font-bold text-center text-gray-300 uppercase hover:underline">
                     FAQ
                 </div>
                 <span className="w-1/5 border-b lg:w-3/4"></span>

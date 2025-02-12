@@ -51,7 +51,7 @@ const MyArtifacts = () => {
                 </title>
             </Helmet>
             <div className="text-center my-10">
-                <h1 className="text-2xl text-gray-300 font-semibold">The Artifact Chronicles Added By You.</h1>
+                <h1 className="text-xl md:text-2xl font-bold text-center text-gray-300">The Artifact Chronicles Added By You.</h1>
                 <p className="text-gray-400 max-w-xs md:max-w-md mx-auto">These artifacts stand as silent witnesses, carrying the essence of history into the present.</p>
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-8">

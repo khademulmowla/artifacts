@@ -2,15 +2,19 @@ import React from 'react';
 import { FaEarlybirds, FaGift, FaPercent } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
 
-const Community = () => {
+const Community = ({ user }) => {
     const handleSubscribe = () => {
-        // Display a success toast when the button is clicked
+        if (!user) {
+            toast.error('Please log in to subscribe.');
+            return;
+        }
+
         toast.success('Thank you for subscribing!');
     };
 
     return (
         <div className="bg-gray-800 text-gray-200 py-10 px-8 rounded-lg shadow-2xl text-center my-10">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-gray-300 mb-4">
                 Get Exclusive Benefits!
             </h2>
             <p className="text-gray-400 mb-8 text-lg">
@@ -32,7 +36,7 @@ const Community = () => {
             </ul>
             <div className="flex flex-col items-center gap-4">
                 <button
-                    type="button" // Changed to type="button" to prevent form submission
+                    type="button"
                     onClick={handleSubscribe}
                     className="w-full max-w-md px-6 py-3 text-white rounded-md bg-[#ac9a1a] hover:bg-blue-900 transition-colors"
                 >
