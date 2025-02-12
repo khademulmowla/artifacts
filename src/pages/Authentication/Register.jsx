@@ -61,8 +61,8 @@ const Register = () => {
 
     return (
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
-            <div className='flex flex-col lg:flex-row items-center w-full max-w-sm lg:max-w-4xl mx-auto overflow-hidden text-white rounded-lg shadow-lg '>
-                <div className='w-full px-6 py-8 lg:px-12 lg:w-1/2 bg-gray-800'>
+            <div className='flex flex-col lg:flex-row items-center w-full max-w-sm lg:max-w-4xl mx-auto overflow-hidden dark:text-white rounded-lg shadow-lg '>
+                <div className='w-full px-6 py-8 lg:px-12 lg:w-1/2 bg-gray-200 dark:bg-gray-800'>
                     <div className='flex justify-center mx-auto'>
                         <img className='w-auto h-7 sm:h-8' src={logo} alt='' />
                     </div>
@@ -122,7 +122,7 @@ const Register = () => {
                                 id='name'
                                 autoComplete='name'
                                 name='name' required
-                                className='block w-full px-4 py-2 border text-gray-600 bg-[#e5e5e5] rounded-lg focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2 border text-gray-600 dark:bg-[#e5e5e5] rounded-lg focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='text'
                             />
                         </div>
@@ -138,7 +138,7 @@ const Register = () => {
                                 autoComplete='photo'
                                 name='photo'
                                 required
-                                className='block w-full px-4 py-2 border text-gray-600 bg-[#e5e5e5] rounded-lg focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2 border text-gray-600 dark:bg-[#e5e5e5] rounded-lg focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='text'
                             />
                         </div>
@@ -154,7 +154,7 @@ const Register = () => {
                                 autoComplete='email'
                                 name='email'
                                 required
-                                className='block w-full px-4 py-2 border rounded-lg text-gray-600 bg-[#e5e5e5] focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2 border rounded-lg text-gray-600 dark:bg-[#e5e5e5] focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='email'
                             />
                         </div>
@@ -174,7 +174,7 @@ const Register = () => {
                                 autoComplete='current-password'
                                 name='password'
                                 required
-                                className='block w-full px-4 py-2 border rounded-lg text-gray-600 bg-[#e5e5e5] focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                                className='block w-full px-4 py-2 border rounded-lg text-gray-600 dark:bg-[#e5e5e5] focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                                 type='password'
                             />
                         </div>
