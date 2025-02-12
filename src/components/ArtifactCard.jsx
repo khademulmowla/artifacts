@@ -23,7 +23,7 @@ const ArtifactCard = ({ art }) => {
                 <p className="mt-2 text-sm text-gray-700 dark:text-gray-400">
                     {history.substring(0, 70)}....
                 </p>
-                <p className='mt-2 text-sm font-bold text-gray-700 dark:text-gray-400 '>Total Like: {like_count}</p>
+                <p className='mt-2 text-sm font-bold text-gray-700 dark:text-gray-400'>Total Like: {like_count}</p>
             </div>
             <div className="mt-auto p-4">
                 <Link to={`/artifact/${_id}`}>
