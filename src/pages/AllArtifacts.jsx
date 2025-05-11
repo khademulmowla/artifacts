@@ -2,17 +2,29 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ArtifactCard from '../components/ArtifactCard';
 import { Helmet } from 'react-helmet-async';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const AllArtifacts = () => {
     const [arts, setArts] = useState([])
     const [search, setSearch] = useState('')
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchAllArts = async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-artifacts?search=${search}`)
-            setArts(data)
-        }
-        fetchAllArts()
-    }, [search])
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-artifacts?search=${search}`);
+                setArts(data);
+            } catch (error) {
+                console.error('Error fetching artifacts:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchAllArts();
+    }, [search]);
+    if (loading) {
+        return <LoadingSpinner />;
+    }
 
     return (
         <div>

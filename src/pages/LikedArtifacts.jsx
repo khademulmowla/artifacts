@@ -4,20 +4,31 @@ import { AuthContext } from "../providers/AuthProvider";
 import axios from "axios";
 import LikedArtCard from "../components/LikedArtCard";
 import { Helmet } from "react-helmet-async";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 
 const LikedArtifacts = () => {
     const navigate = useNavigate()
     const { user } = useContext(AuthContext)
     const [likes, setLikes] = useState([])
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetchAllLikeArts()
     }, [user])
     const fetchAllLikeArts = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/liked/${user?.email}`)
-        setLikes(data)
+        setLoading(true);
+        try {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/liked/${user?.email}`)
+            setLikes(data)
+        } catch (error) {
+            console.error("Error fetching liked artifacts:", error);
+        } finally {
+            setLoading(false);
+        }
     }
-    // console.log(likes)
+    if (loading) {
+        return <LoadingSpinner />;
+    }
 
     return (
         <div className="my-10">

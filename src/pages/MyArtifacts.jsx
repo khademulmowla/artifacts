@@ -4,16 +4,28 @@ import { AuthContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const MyArtifacts = () => {
     const { user } = useContext(AuthContext)
     const [arts, setArts] = useState([])
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetchAllArts()
     }, [user])
     const fetchAllArts = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/artifacts/${user?.email}`)
-        setArts(data)
+        setLoading(true);
+        try {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/artifacts/${user?.email}`)
+            setArts(data)
+        } catch (error) {
+            console.error("Error fetching my artifacts:", error);
+        } finally {
+            setLoading(false);
+        }
+    }
+    if (loading) {
+        return <LoadingSpinner />;
     }
     const handleDelete = async id => {
         try {
