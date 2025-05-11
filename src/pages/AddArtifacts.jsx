@@ -25,7 +25,8 @@ const AddArtifacts = () => {
         console.log(formData)
         try {
             await axios.post(`${import.meta.env.VITE_API_URL}/add-artifact`, formData)
-            form.reset()
+            form.reset();
+            navigate('my-artifacts')
             toast.success('Data added successfully')
         }
         catch (err) {
